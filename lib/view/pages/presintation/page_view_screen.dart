@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:saeed/view/screens/HomeScreen/Presintation/home_screen.dart';
+import 'package:saeed/view/widgets/bottomNavigationBar/bottomNavigationBar.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../configs/them.dart';
@@ -19,15 +20,18 @@ class _PageViewScreenState extends State<PageViewScreen> {
 
   onClickNext() {
     if (_pageController!.hasClients) {
-      if (_pageController!.page! < 3) {
+      if (_pageController!.page! < 2) {
         _pageController!.nextPage(
             duration: const Duration(milliseconds: 500),
             curve: Curves.bounceInOut);
         print(_pageController!.hasClients);
+        print(_pageController!.page);
       } else {
-        if (_pageController!.page! == 3) {
+        if (_pageController!.page! == 2) {
           Navigator.pushReplacement(
-              context, MaterialPageRoute(builder: (context) => HomeScreen()));
+              context,
+              MaterialPageRoute(
+                  builder: (context) => const MyBottomNavigationBar()));
         }
       }
     }
@@ -85,7 +89,8 @@ class _PageViewScreenState extends State<PageViewScreen> {
                           Navigator.pushReplacement(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const HomeScreen()));
+                                  builder: (context) =>
+                                      const MyBottomNavigationBar()));
                         },
                         child: Container(
                           padding: const EdgeInsets.only(
