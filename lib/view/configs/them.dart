@@ -1,4 +1,4 @@
-// ignore_for_file: unused_field
+// ignore_for_file: unused_field, unused_element, deprecated_member_use
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -44,13 +44,11 @@ abstract class AppTheme {
   static ThemeData light() => ThemeData(
         primaryColor: Colors.white,
         dividerColor: Colors.black,
-        bottomAppBarColor: AppColors.primary1,
         hoverColor: AppColors.primary1,
         brightness: Brightness.light,
         visualDensity: visualDensity,
         textTheme:
             GoogleFonts.cairoTextTheme().apply(bodyColor: AppColors.primary1),
-        backgroundColor: _LightColors.background,
         progressIndicatorTheme: const ProgressIndicatorThemeData(
           color: Color(0xFF114B5F),
         ),
@@ -60,10 +58,10 @@ abstract class AppTheme {
             foregroundColor: Color(0x003a3b3c),
             backgroundColor: AppColors.primary1),
         primaryTextTheme: const TextTheme(
-          headline6: TextStyle(color: AppColors.textDark),
+          titleLarge: TextStyle(color: AppColors.textDark),
         ),
         iconTheme: const IconThemeData(color: AppColors.primary1),
-        colorScheme: const ColorScheme.light().copyWith(secondary: accentColor),
+        colorScheme: const ColorScheme.light().copyWith(secondary: accentColor), bottomAppBarTheme: const BottomAppBarTheme(color: AppColors.primary1),
       );
 
   /// Dark theme and its settings.
@@ -72,11 +70,9 @@ abstract class AppTheme {
         dividerColor: const Color.fromARGB(222, 236, 247, 247),
         brightness: Brightness.dark,
         hoverColor: const Color.fromARGB(204, 0, 0, 0),
-        bottomAppBarColor: const Color.fromARGB(146, 19, 20, 21),
         visualDensity: visualDensity,
         textTheme:
             GoogleFonts.cairoTextTheme().apply(bodyColor: AppColors.textLigth),
-        backgroundColor: _DarkColors.background,
         progressIndicatorTheme: const ProgressIndicatorThemeData(
           color: AppColors.progressIndicatorDark,
         ),
@@ -90,8 +86,7 @@ abstract class AppTheme {
           headline6: TextStyle(color: AppColors.textLigth),
         ),
         iconTheme:
-            const IconThemeData(color: Color.fromARGB(231, 255, 255, 255)),
-        colorScheme: const ColorScheme.dark().copyWith(secondary: accentColor),
+            const IconThemeData(color: Color.fromARGB(231, 255, 255, 255)), bottomAppBarTheme: const BottomAppBarTheme(color: Color.fromARGB(146, 19, 20, 21)), colorScheme: const ColorScheme.dark().copyWith(secondary: accentColor).copyWith(background: _DarkColors.background),
       );
 
   TextTheme textThemes() {
