@@ -7,8 +7,8 @@ import 'package:saeed/view/screens/HomeScreen/Presintation/home_screen.dart';
 import '../../configs/them.dart';
 import '../../screens/CentersScreen/Presintation/centers_screen.dart';
 
-class MyBottomNavigationBar extends StatelessWidget {
-  const MyBottomNavigationBar({Key? key}) : super(key: key);
+class MainScreen extends StatelessWidget {
+  const MainScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -58,6 +58,7 @@ class MyBottomNavigationBar extends StatelessWidget {
               selectedIconTheme: const IconThemeData(
                 color: AppColors.primary1,
                 size: 25,
+              
               ),
               selectedItemColor: AppColors.primary1,
               selectedLabelStyle: const TextStyle(fontWeight: FontWeight.bold),

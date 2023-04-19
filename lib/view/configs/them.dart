@@ -7,7 +7,7 @@ import 'package:sizer/sizer.dart';
 abstract class AppColors {
   static const primary1 = Color.fromARGB(255, 160, 115, 251);
 
-  static const accent = Color(0xFFD6755B);
+  static const accent = Color.fromARGB(255, 235, 63, 15);
   static const textDark = Color(0xFF53585A);
   static const textLigth = Color(0xFFF5F5F5);
   static const textColorHeader =  Color.fromARGB(255, 160, 115, 251);

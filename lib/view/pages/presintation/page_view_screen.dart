@@ -28,10 +28,8 @@ class _PageViewScreenState extends State<PageViewScreen> {
         print(_pageController!.page);
       } else {
         if (_pageController!.page! == 2) {
-          Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(
-                  builder: (context) => const MyBottomNavigationBar()));
+          Navigator.pushReplacement(context,
+              MaterialPageRoute(builder: (context) => const MainScreen()));
         }
       }
     }
@@ -89,8 +87,7 @@ class _PageViewScreenState extends State<PageViewScreen> {
                           Navigator.pushReplacement(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) =>
-                                      const MyBottomNavigationBar()));
+                                  builder: (context) => const MainScreen()));
                         },
                         child: Container(
                           padding: const EdgeInsets.only(

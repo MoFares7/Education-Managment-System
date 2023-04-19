@@ -34,13 +34,7 @@ class NormalFormEditing extends StatelessWidget {
             if (value!.isEmpty) {
               return tr('The field is required');
             }
-            if (!RegExp(
-                    r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$')
-                .hasMatch(value)) {
-              return tr('Enter the correct value');
-            } else {
-              return null;
-            }
+            
           },
           keyboardType: keyboardType,
           autofillHints: const [AutofillHints.email],
