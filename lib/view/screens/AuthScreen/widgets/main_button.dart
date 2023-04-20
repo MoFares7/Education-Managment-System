@@ -21,7 +21,7 @@ class MainButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 8, vertical: 2.2.h),
+      padding: EdgeInsets.symmetric(horizontal: 1.w, vertical: 2.2.h),
       child: SizedBox(
         width: width,
         height: height,
@@ -39,7 +39,7 @@ class MainButton extends StatelessWidget {
               titleButton,
               style: TextStyle(
                   fontSize: fontSize,
-                  fontWeight: FontWeight.w800,
+                  fontWeight: FontWeight.w700,
                   color: AppColors.textColorWhiteBold),
             ))),
       ),

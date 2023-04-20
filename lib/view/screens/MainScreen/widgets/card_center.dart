@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:saeed/view/configs/them.dart';
 import 'package:saeed/view/screens/AuthScreen/widgets/main_button.dart';
 import 'package:sizer/sizer.dart';
@@ -19,6 +20,7 @@ class CardCenter extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var _svaeRating;
     return Container(
       height: 30.h,
       width: 90.w,
@@ -62,44 +64,69 @@ class CardCenter extends StatelessWidget {
                 SizedBox(
                   height: 1.h,
                 ),
-                Column(
+                Row(
                   children: [
-                    const Text(
-                      "Center Name",
-                      style: TextStyle(fontSize: 18, color: AppColors.primary1),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 10),
-                      child: Text(
-                        centerName,
-                        style: const TextStyle(
-                            fontSize: 14, color: AppColors.textColorBlackBold),
+                    RatingBar.builder(
+                      initialRating: 0,
+                      minRating: 1,
+                      direction: Axis.vertical,
+                      itemCount: 4,
+                      itemSize: 25,
+                      itemPadding: const EdgeInsets.symmetric(vertical: 5),
+                      itemBuilder: (context, _) => const Icon(
+                        Icons.star,
+                        color: AppColors.primary1,
                       ),
+                      onRatingUpdate: (rating) {
+                        print(rating);
+                      },
                     ),
-                    SizedBox(
-                      height: 1.h,
-                    ),
-                    const Text(
-                      "Center City",
-                      style: TextStyle(fontSize: 18, color: AppColors.primary1),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 10),
-                      child: Text(
-                        centerCity,
-                        style: const TextStyle(
-                            fontSize: 14, color: AppColors.textColorBlackBold),
-                      ),
-                    ),
-                    MainButton(
-                      onClickNext: () {},
-                      titleButton: "more details",
-                      width: 30.w,
-                      height: 5.h,
-                      fontSize: 15,
+                    Column(
+                      children: [
+                        Text(
+                          "Center Name",
+                          style: TextStyle(
+                              fontSize: 11.sp, color: AppColors.primary1),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 10),
+                          child: Text(
+                            centerName,
+                            style: TextStyle(
+                                fontSize: 9.sp,
+                                color: AppColors.textColorBlackBold,
+                                fontWeight: FontWeight.w300),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 1.h,
+                        ),
+                        Text(
+                          "Center City",
+                          style: TextStyle(
+                              fontSize: 11.sp, color: AppColors.primary1),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 10),
+                          child: Text(
+                            centerCity,
+                            style: TextStyle(
+                                fontSize: 9.sp,
+                                color: AppColors.textColorBlackBold,
+                                fontWeight: FontWeight.w300),
+                          ),
+                        ),
+                        MainButton(
+                          onClickNext: () {},
+                          titleButton: "More details",
+                          width: 30.w,
+                          height: 5.h,
+                          fontSize: 10.sp,
+                        ),
+                      ],
                     ),
                   ],
-                ),
+                )
               ],
             ),
           ),
@@ -128,3 +155,5 @@ class CardCenter extends StatelessWidget {
     );
   }
 }
+
+HalfFillrdIcon() {}

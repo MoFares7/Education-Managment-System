@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
           title: 'Education User App',
           theme: ThemeData(),
           debugShowCheckedModeBanner: false,
-          home: PageViewScreen(),
+          home: HomeScreen(),
         );
       },
     );

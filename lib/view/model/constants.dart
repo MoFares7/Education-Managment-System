@@ -14,7 +14,12 @@ final List<Widget> carouselItems = [
     child: Center(
       child: Stack(
         children: [
-          Image.asset("assets/images/time.jpg"),
+          Image.asset(
+            "assets/images/time.jpg",
+            height: 30.h,
+            width: 100.w,
+            fit: BoxFit.cover,
+          ),
           Padding(
             padding: EdgeInsets.symmetric(vertical: 1.h),
             child: SizedBox(
@@ -36,7 +41,12 @@ final List<Widget> carouselItems = [
     child: Center(
       child: Stack(
         children: [
-          Image.asset("assets/images/calander.jpg"),
+          Image.asset(
+            "assets/images/calander.jpg",
+            height: 30.h,
+            width: 100.w,
+            fit: BoxFit.cover,
+          ),
           Padding(
             padding: EdgeInsets.symmetric(vertical: 2.h),
             child: SizedBox(
