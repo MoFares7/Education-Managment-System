@@ -8,7 +8,7 @@ import 'package:saeed/view/configs/them.dart';
 import 'package:saeed/view/screens/AuthScreen/widgets/main_button.dart';
 import 'package:sizer/sizer.dart';
 
-import '../../../widgets/bottomNavigationBar/bottomNavigationBar.dart';
+import '../../MainScreen/MainScreen.dart';
 import '../LoginScreen/login_screen.dart';
 
 class OtpVaildationScreen extends StatelessWidget {
@@ -156,6 +156,7 @@ class OtpVaildationScreen extends StatelessWidget {
                                   MainButton(
                                       height: 7.h,
                                       width: 50.w,
+                                      fontSize: 11.sp,
                                       titleButton: "Resend Code",
                                       onClickNext: () {}),
                                 ],

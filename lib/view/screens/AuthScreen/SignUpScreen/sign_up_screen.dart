@@ -4,11 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:form_field_validator/form_field_validator.dart';
 import 'package:saeed/view/screens/AuthScreen/LoginScreen/login_screen.dart';
+import 'package:saeed/view/screens/AuthScreen/SignUpScreen/opt_validate_screen.dart';
 import 'package:saeed/view/screens/AuthScreen/widgets/main_button.dart';
 import 'package:saeed/view/screens/AuthScreen/widgets/normal_filede.dart';
 import 'package:saeed/view/screens/AuthScreen/widgets/password_filed.dart';
 import 'package:saeed/view/screens/AuthScreen/widgets/email_filed.dart';
-import 'package:saeed/view/widgets/bottomNavigationBar/bottomNavigationBar.dart';
+import 'package:saeed/view/screens/MainScreen/MainScreen.dart';
 import 'package:sizer/sizer.dart';
 import '../../../configs/them.dart';
 import 'package:saeed/view/model/constants.dart';
@@ -236,6 +237,7 @@ class SignUpScreen extends StatelessWidget {
                                     MainButton(
                                       height: 7.h,
                                       width: 50.w,
+                                      fontSize: 11.sp,
                                       titleButton: "Sign Up",
                                       onClickNext: () {
                                         if (_formKey.currentState!.validate()) {
@@ -243,13 +245,14 @@ class SignUpScreen extends StatelessWidget {
                                               context,
                                               MaterialPageRoute(
                                                   builder: (context) =>
-                                                      const MainScreen()));
+                                                      OtpVaildationScreen()));
                                         }
                                       },
                                     ),
                                     MainButton(
                                       height: 7.h,
                                       width: 50.w,
+                                      fontSize: 11.sp,
                                       titleButton: "Login as Guest",
                                       onClickNext: () {
                                         Navigator.pushReplacement(

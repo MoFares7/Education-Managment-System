@@ -8,12 +8,14 @@ class MainButton extends StatelessWidget {
   final String titleButton;
   final double width;
   final double height;
+  final double fontSize;
   const MainButton(
       {Key? key,
       required this.onClickNext,
       required this.titleButton,
       required this.width,
-      required this.height})
+      required this.height,
+      required this.fontSize})
       : super(key: key);
 
   @override
@@ -36,7 +38,7 @@ class MainButton extends StatelessWidget {
                 child: Text(
               titleButton,
               style: TextStyle(
-                  fontSize: 11.sp,
+                  fontSize: fontSize,
                   fontWeight: FontWeight.w800,
                   color: AppColors.textColorWhiteBold),
             ))),

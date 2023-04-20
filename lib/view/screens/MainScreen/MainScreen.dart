@@ -1,11 +1,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:saeed/view/screens/AccountScreen/Presintation/account_screen.dart';
-import 'package:saeed/view/screens/HomeScreen/Presintation/home_screen.dart';
+import 'package:saeed/view/screens/MainScreen/AccountScreen/Presintation/account_screen.dart';
+import 'package:saeed/view/screens/MainScreen/HomeScreen/Presintation/home_screen.dart';
 
 import '../../configs/them.dart';
-import '../../screens/CentersScreen/Presintation/centers_screen.dart';
+import 'CentersScreen/Presintation/centers_screen.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({Key? key}) : super(key: key);
