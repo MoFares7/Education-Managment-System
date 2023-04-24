@@ -223,7 +223,7 @@ class SignUpScreen extends StatelessWidget {
                                           onChanged: (newValue) {
                                             _selectedValue.value = newValue!;
                                           },
-                                          items: jurnalistItems);
+                                          items: citylistItems);
                                     },
                                   ),
                                 ),

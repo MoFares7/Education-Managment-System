@@ -1,8 +1,11 @@
 
+// ignore_for_file: deprecated_member_use, file_names
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:saeed/view/screens/MainScreen/AccountScreen/Presintation/account_screen.dart';
 import 'package:saeed/view/screens/MainScreen/HomeScreen/Presintation/home_screen.dart';
+import 'package:saeed/view/screens/MainScreen/RateScreen/rate_screen.dart';
 
 import '../../configs/them.dart';
 import 'CentersScreen/Presintation/centers_screen.dart';
@@ -15,9 +18,10 @@ class MainScreen extends StatelessWidget {
     final ValueNotifier<int> currentIndex = ValueNotifier<int>(0);
 
     final List<Widget> pages = [
-      const HomeScreen(),
-      const CentersScreen(),
-      const AccountScreen(),
+       const HomeScreen(),
+       const CentersScreen(),
+       const MyRateScreen(),
+       const AccountScreen(),
     ];
 
     return Scaffold(

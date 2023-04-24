@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:saeed/view/model/constants.dart';
-import 'package:saeed/view/screens/AuthScreen/widgets/main_button.dart';
 import 'package:saeed/view/screens/MainScreen/widgets/card_center.dart';
 import 'package:saeed/view/widgets/search_field.dart';
 import 'package:sizer/sizer.dart';
@@ -45,29 +44,32 @@ class HomeScreen extends StatelessWidget {
                   itemBuilder: (context, index) {
                     return Column(
                       children: [
-                         CardCenter(
+                        CenterCard(
                           centerType: "Free",
                           centerName: "Sanad Team",
                           centerCity: "Damascus",
-                          centerImage:     "assets/images/sanad.png",
+                          centerImage: "assets/images/sanad.png",
+                          centerRating: 4,
                         ),
                         SizedBox(
                           height: 3.h,
                         ),
-                           CardCenter(
+                        CenterCard(
                           centerType: "Paid",
                           centerName: "Shuhub",
                           centerCity: "Damascus",
                           centerImage: "assets/images/sh.jpg",
+                          centerRating: 2,
                         ),
                         SizedBox(
                           height: 3.h,
                         ),
-                           CardCenter(
+                        CenterCard(
                           centerType: "Free",
                           centerName: "Oussos",
                           centerCity: "Damascus",
                           centerImage: "assets/images/oussos.jpg",
+                          centerRating: 0,
                         ),
                       ],
                     );

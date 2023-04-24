@@ -1,7 +1,5 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:saeed/view/configs/them.dart';
@@ -9,7 +7,6 @@ import 'package:saeed/view/screens/AuthScreen/widgets/main_button.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../MainScreen/MainScreen.dart';
-import '../LoginScreen/login_screen.dart';
 
 class OtpVaildationScreen extends StatelessWidget {
   OtpVaildationScreen({super.key});
@@ -126,7 +123,7 @@ class OtpVaildationScreen extends StatelessWidget {
                                         ),
                                         onCompleted: (value) {
                                           if (value == requiredNumber) {
-                                            print('yyyyyyyyyyyyyyyyyy');
+                                        
                                             Navigator.pushReplacement(
                                                 context,
                                                 MaterialPageRoute(

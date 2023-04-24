@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
@@ -16,7 +18,7 @@ class SlideIndicator extends StatelessWidget {
       decorator: DotsDecorator(
         size: Size(5.w, 1.3.h),
         activeSize: Size(15.w, 1.h),
-        color: Color.fromARGB(255, 224, 218, 236),
+        color: const Color.fromARGB(255, 224, 218, 236),
         activeColor: AppColors.primary1,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10.0),

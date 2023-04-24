@@ -1,26 +1,27 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:saeed/view/configs/them.dart';
 import 'package:saeed/view/screens/AuthScreen/widgets/main_button.dart';
 import 'package:sizer/sizer.dart';
 
-class CardCenter extends StatelessWidget {
-  CardCenter(
+// ignore: must_be_immutable
+class CenterCard extends StatelessWidget {
+  CenterCard(
       {super.key,
       required this.centerType,
       required this.centerName,
       required this.centerCity,
-      required this.centerImage});
+      required this.centerImage,
+      required this.centerRating
+      });
   String centerType;
   String centerName;
   String centerCity;
   String centerImage;
+  double centerRating;
 
   @override
   Widget build(BuildContext context) {
-    var _svaeRating;
     return Container(
       height: 30.h,
       width: 90.w,
@@ -67,7 +68,7 @@ class CardCenter extends StatelessWidget {
                 Row(
                   children: [
                     RatingBar.builder(
-                      initialRating: 0,
+                      initialRating: centerRating,
                       minRating: 1,
                       direction: Axis.vertical,
                       itemCount: 4,
@@ -78,7 +79,7 @@ class CardCenter extends StatelessWidget {
                         color: AppColors.primary1,
                       ),
                       onRatingUpdate: (rating) {
-                        print(rating);
+                    
                       },
                     ),
                     Column(
@@ -155,5 +156,3 @@ class CardCenter extends StatelessWidget {
     );
   }
 }
-
-HalfFillrdIcon() {}

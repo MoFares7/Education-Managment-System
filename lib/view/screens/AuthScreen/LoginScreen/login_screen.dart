@@ -113,7 +113,7 @@ class LoginScreen extends StatelessWidget {
                               ),
                               PasswordFormFiled(
                                   hintText: "myEmail@domain.com",
-                                  controller: _emailController,
+                                  controller: _passwordController,
                                   validator: MultiValidator(
                                     [
                                       RequiredValidator(

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:saeed/view/screens/AuthScreen/LoginScreen/login_screen.dart';
-import 'package:saeed/view/screens/MainScreen/HomeScreen/Presintation/home_screen.dart';
-import 'package:saeed/view/screens/MainScreen/MainScreen.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../configs/them.dart';
@@ -25,8 +23,6 @@ class _PageViewScreenState extends State<PageViewScreen> {
         _pageController!.nextPage(
             duration: const Duration(milliseconds: 500),
             curve: Curves.bounceInOut);
-        print(_pageController!.hasClients);
-        print(_pageController!.page);
       } else {
         if (_pageController!.page! == 2) {
           Navigator.pushReplacement(
