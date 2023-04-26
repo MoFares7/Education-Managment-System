@@ -237,7 +237,7 @@ class SignUpScreen extends StatelessWidget {
                                     MainButton(
                                       height: 7.h,
                                       width: 50.w,
-                                      fontSize: 11.sp,
+                                      fontSize: 11.sp,color: AppColors.primary1,
                                       titleButton: "Sign Up",
                                       onClickNext: () {
                                         if (_formKey.currentState!.validate()) {
@@ -253,6 +253,7 @@ class SignUpScreen extends StatelessWidget {
                                       height: 7.h,
                                       width: 50.w,
                                       fontSize: 11.sp,
+                                      color: AppColors.primary1,
                                       titleButton: "Login as Guest",
                                       onClickNext: () {
                                         Navigator.pushReplacement(

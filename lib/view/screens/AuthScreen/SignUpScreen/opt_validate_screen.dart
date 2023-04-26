@@ -154,6 +154,7 @@ class OtpVaildationScreen extends StatelessWidget {
                                       height: 7.h,
                                       width: 50.w,
                                       fontSize: 11.sp,
+                                      color: AppColors.primary1,
                                       titleButton: "Resend Code",
                                       onClickNext: () {}),
                                 ],

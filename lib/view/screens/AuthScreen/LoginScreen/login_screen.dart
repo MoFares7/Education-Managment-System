@@ -144,6 +144,7 @@ class LoginScreen extends StatelessWidget {
                                       height: 7.h,
                                       width: 50.w,
                                       fontSize: 11.sp,
+                                      color: AppColors.primary1,
                                       titleButton: "Login",
                                       onClickNext: () {
                                         if (_formKey.currentState!.validate()) {
@@ -159,6 +160,7 @@ class LoginScreen extends StatelessWidget {
                                       height: 7.h,
                                       width: 50.w,
                                       fontSize: 11.sp,
+                                      color: AppColors.primary1,
                                       titleButton: "Login as Guest",
                                       onClickNext: () {},
                                     ),

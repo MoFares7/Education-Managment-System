@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:saeed/view/configs/them.dart';
-import 'package:saeed/view/screens/MainScreen/DetailsCenterScreen/Presintation/managment_appointments.dart';
+import 'package:saeed/view/screens/MainScreen/DetailsCenterScreen/Presintation/managment_appointments_screen.dart';
 import 'package:saeed/view/screens/MainScreen/widgets/MainAppBar.dart';
 import 'package:saeed/view/screens/MainScreen/DetailsCenterScreen/widgets/card_center_image.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../widgets/card_option.dart';
+import 'about_center_screen.dart';
 
 class DetailsCenterScreen extends StatelessWidget {
   DetailsCenterScreen({Key? key}) : super(key: key);
@@ -215,7 +216,13 @@ class DetailsCenterScreen extends StatelessWidget {
                   textColor: AppColors.primary1,
                   icon: "assets/icons/about.svg",
                   iconColor: AppColors.primary1,
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                const AboutCenterScreen()));
+                  },
                 ),
               ),
             ),

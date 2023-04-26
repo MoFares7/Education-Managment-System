@@ -12,8 +12,7 @@ class CenterCard extends StatelessWidget {
       required this.centerName,
       required this.centerCity,
       required this.centerImage,
-      required this.centerRating
-      });
+      required this.centerRating});
   String centerType;
   String centerName;
   String centerCity;
@@ -78,9 +77,7 @@ class CenterCard extends StatelessWidget {
                         Icons.star,
                         color: AppColors.primary1,
                       ),
-                      onRatingUpdate: (rating) {
-                    
-                      },
+                      onRatingUpdate: (rating) {},
                     ),
                     Column(
                       children: [
@@ -123,6 +120,7 @@ class CenterCard extends StatelessWidget {
                           width: 30.w,
                           height: 5.h,
                           fontSize: 10.sp,
+                          color: AppColors.primary1,
                         ),
                       ],
                     ),

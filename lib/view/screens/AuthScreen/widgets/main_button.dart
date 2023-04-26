@@ -9,13 +9,15 @@ class MainButton extends StatelessWidget {
   final double width;
   final double height;
   final double fontSize;
+  final Color color;
   const MainButton(
       {Key? key,
       required this.onClickNext,
       required this.titleButton,
       required this.width,
       required this.height,
-      required this.fontSize})
+      required this.fontSize,
+      required this.color})
       : super(key: key);
 
   @override
@@ -30,7 +32,7 @@ class MainButton extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10.0),
                 ),
-                backgroundColor: AppColors.primary1),
+                backgroundColor: color),
             onPressed: () {
               onClickNext();
             },
